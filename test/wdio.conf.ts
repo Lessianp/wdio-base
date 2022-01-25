@@ -50,9 +50,6 @@ export const config: WebdriverIO.Config = {
     specs: [
         './test/specs/**/*.ts'
     ],
-    suites: {
-        loginSuite: ['./test/specs/login/*.ts']
-    },
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -100,7 +97,7 @@ export const config: WebdriverIO.Config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'silent',
+    logLevel: 'info',
     //
     // Set specific log levels per logger
     // loggers:
