@@ -1,14 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.containsText = exports.withText = exports.containsAttributeValueAndText = exports.containsAttributeAndValue = exports.withAttributeValueAndText = exports.withAttributeAndValue = exports.withTitle = exports.withIdStart = exports.withId = exports.withTestIdAndText = exports.withTestId = void 0;
-function withTestId(id) {
-    return `[data-test-id=${id}]`;
-}
-exports.withTestId = withTestId;
-function withTestIdAndText(id, text) {
-    return `//*[@data-anypoint-component='${id}' and contains(text(), '${text}')]`;
-}
-exports.withTestIdAndText = withTestIdAndText;
 function withId(id) {
     return `[id='${id}']`;
 }

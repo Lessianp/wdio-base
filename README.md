@@ -11,10 +11,10 @@ Installation Guide
 * Install latest [Node and NPM](https://nodejs.org/en/download/) version.
 
 ### Installation
-You'll first need to login to mulesoft's npm registry using your LDAP username and password:
+You'll first need to install all dependencies found in `package.json` file.
 
 ```
-npm install
+npm install or npm i or yarn install
 ```
 
 ### Config (Done already) 
