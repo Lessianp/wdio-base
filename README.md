@@ -25,6 +25,15 @@ In order to build the project from scratch, run `npm init wdio .`.
 
 After installing the package, you can start building your page objects.
 
+In order to run your test: 
+```
+npx wdio run test/wdio.conf.ts --spec test/specs/example.e2e.ts
+```
+In order to run a suite: 
+```
+npx wdio run test/wdio.conf.ts --suite suitename
+```
+
 ### Examples:
 
 1. How to declare an element (test/pageobjects/selectors/*.ts)

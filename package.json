@@ -9,13 +9,10 @@
     },
     "dependencies": {
         "axios": "^0.25.0",
-        "dotenv": "^10.0.0",
-        "http-request": "^0.7.0",
         "speakeasy": "^2.0.0",
         "ts-node": "^10.4.0",
         "tsconfig-paths": "^3.12.0",
-        "typescript": "^4.5.5",
-        "xmldom": "^0.6.0"
+        "typescript": "^4.5.5"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^5.10.1",
