@@ -8,6 +8,6 @@ export default class BasePage {
     * @param path path of the sub page (e.g. /path/to/page.html)
     */
     public open(path: string): Promise<string> {
-        return browser.url(path)
+        return browser.url(path);
     }
 }
