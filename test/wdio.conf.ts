@@ -1,3 +1,6 @@
+const video = require('wdio-video-reporter');
+  
+
 export const config: WebdriverIO.Config = {
     //
     // ====================
@@ -16,7 +19,7 @@ export const config: WebdriverIO.Config = {
     // If you need to configure how ts-node runs please use the
     // environment variables for ts-node or use wdio config's autoCompileOpts section.
     //
-    
+   
     autoCompileOpts: {
         autoCompile: true,
         // see https://github.com/TypeStrong/ts-node#cli-and-programmatic-options
@@ -97,7 +100,7 @@ export const config: WebdriverIO.Config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'silent',
     //
     // Set specific log levels per logger
     // loggers:
@@ -159,9 +162,17 @@ export const config: WebdriverIO.Config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
-
-
+    reporters: ['spec',
+        [video, {
+          saveAllVideos: false,       // If true, also saves videos for successful test cases
+          videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
+        }],
+      ['allure', {
+        outputDir: './_results_/allure-raw',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+      }],
+    ],
     
     //
     // Options to be passed to Mocha.

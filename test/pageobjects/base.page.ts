@@ -1,3 +1,6 @@
+import { clickElement } from "../../helpers/actions";
+import { baseSelectors } from "./selectors/baseSelectors";
+
 /**
 * main page object containing all methods, selectors and functionality
 * that is shared across all page objects
@@ -10,4 +13,11 @@ export default class BasePage {
     public open(path: string): Promise<string> {
         return browser.url(path);
     }
+
+    public async selectDropdownOption(label: string, option: string) {
+        const field = `${baseSelectors.customDropdwon.replace("{label}", label)}`
+        await clickElement(field)
+        await clickElement(`${field}${baseSelectors.dropdownOption.replace("{option}", option)}`)
+    }
+
 }
